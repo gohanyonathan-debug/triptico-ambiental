@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tríptico Interactivo: Cultura Ambiental</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header>
+    <h1>
+      <img src="icons/planeta.png" width="45"> Tríptico Interactivo: Cultura Ambiental <img src="icons/hoja.png" width="45">
+    </h1>
+    <p>Toca cada panel para descubrir su contenido 🌱</p>
+  </header>
+
+  <section class="triptico">
+    <div class="panel" style="background-image:url('img/valores.jpg')" onclick="abrirSeccion(1)">
+      <img src="icons/planeta.png" class="icono-panel"><h2>1️⃣ Valores Ambientales</h2>
+    </div>
+    <div class="panel" style="background-image:url('img/actitudes.jpg')" onclick="abrirSeccion(2)">
+      <img src="icons/hoja.png" class="icono-panel"><h2>2️⃣ Actitudes que Transforman</h2>
+    </div>
+    <div class="panel" style="background-image:url('img/creencias.jpg')" onclick="abrirSeccion(3)">
+      <img src="icons/reciclaje.png" class="icono-panel"><h2>3️⃣ Creencias que Impulsan</h2>
+    </div>
+    <div class="panel" style="background-image:url('img/pensamiento.jpg')" onclick="abrirSeccion(4)">
+      <img src="icons/bombilla.png" class="icono-panel"><h2>4️⃣ Del Pensamiento a la Acción</h2>
+    </div>
+    <div class="panel" style="background-image:url('img/sostenibles.jpg')" onclick="abrirSeccion(5)">
+      <img src="icons/flor.png" class="icono-panel"><h2>5️⃣ Comportamientos Sostenibles</h2>
+    </div>
+    <div class="panel" style="background-image:url('img/obstaculos.jpg')" onclick="abrirSeccion(6)">
+      <img src="icons/balanza.png" class="icono-panel"><h2>6️⃣ Obstáculos y Oportunidades</h2>
+    </div>
+    <div class="panel" style="background-image:url('img/emocional.jpg')" onclick="abrirSeccion(7)">
+      <img src="icons/corazon.png" class="icono-panel"><h2>7️⃣ Educación Emocional y Ambiental</h2>
+    </div>
+    <div class="panel" style="background-image:url('img/huella.jpg')" onclick="abrirSeccion(8)">
+      <img src="icons/huella.png" class="icono-panel"><h2>8️⃣ Tu Huella Simbólica</h2>
+    </div>
+  </section>
+
+  <div id="modal" class="modal">
+    <div class="contenido">
+      <span class="cerrar" onclick="cerrarModal()">&times;</span>
+      <div id="texto"></div>
+      <video id="video" src="" controls></video>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Tríptico Ambiental Interactivo 🌿</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
