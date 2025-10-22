@@ -3,55 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tríptico Interactivo: Cultura Ambiental</title>
+  <title>Tríptico Ambiental</title>
   <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-  <header>
-    <h1>
-      <img src="icons/planeta.png" width="45"> Tríptico Interactivo: Cultura Ambiental <img src="icons/hoja.png" width="45">
-    </h1>
-    <p>Toca cada panel para descubrir su contenido 🌱</p>
-  </header>
+  <div class="triptico">
+    <div class="tarjeta" id="valores">
+      <img src="icons/arbol.png" alt="Valores ambientales">
+      <h2>Valores Ambientales</h2>
+      <p>Los valores ambientales son principios que nos guían para cuidar la naturaleza. Respetar la vida, actuar con responsabilidad y pensar en las futuras generaciones.</p>
+      <video src="videos/valores.mp4" controls></video>
+    </div>
 
-  <section class="triptico">
-    <div class="panel" style="background-image:url('img/valores.jpg')" onclick="abrirSeccion(1)">
-      <img src="icons/planeta.png" class="icono-panel"><h2>1️⃣ Valores Ambientales</h2>
+    <div class="tarjeta" id="actitudes">
+      <img src="icons/corazon.png" alt="Actitudes">
+      <h2>Actitudes que transforman</h2>
+      <p>Las actitudes muestran cómo nos sentimos y actuamos frente al medio ambiente. Una actitud positiva nos lleva a participar, cuidar y aprender; una negativa nos aleja del compromiso.</p>
+      <video src="videos/actitudes.mp4" controls></video>
     </div>
-    <div class="panel" style="background-image:url('img/actitudes.jpg')" onclick="abrirSeccion(2)">
-      <img src="icons/hoja.png" class="icono-panel"><h2>2️⃣ Actitudes que Transforman</h2>
-    </div>
-    <div class="panel" style="background-image:url('img/creencias.jpg')" onclick="abrirSeccion(3)">
-      <img src="icons/reciclaje.png" class="icono-panel"><h2>3️⃣ Creencias que Impulsan</h2>
-    </div>
-    <div class="panel" style="background-image:url('img/pensamiento.jpg')" onclick="abrirSeccion(4)">
-      <img src="icons/bombilla.png" class="icono-panel"><h2>4️⃣ Del Pensamiento a la Acción</h2>
-    </div>
-    <div class="panel" style="background-image:url('img/sostenibles.jpg')" onclick="abrirSeccion(5)">
-      <img src="icons/flor.png" class="icono-panel"><h2>5️⃣ Comportamientos Sostenibles</h2>
-    </div>
-    <div class="panel" style="background-image:url('img/obstaculos.jpg')" onclick="abrirSeccion(6)">
-      <img src="icons/balanza.png" class="icono-panel"><h2>6️⃣ Obstáculos y Oportunidades</h2>
-    </div>
-    <div class="panel" style="background-image:url('img/emocional.jpg')" onclick="abrirSeccion(7)">
-      <img src="icons/corazon.png" class="icono-panel"><h2>7️⃣ Educación Emocional y Ambiental</h2>
-    </div>
-    <div class="panel" style="background-image:url('img/huella.jpg')" onclick="abrirSeccion(8)">
-      <img src="icons/huella.png" class="icono-panel"><h2>8️⃣ Tu Huella Simbólica</h2>
-    </div>
-  </section>
 
-  <div id="modal" class="modal">
-    <div class="contenido">
-      <span class="cerrar" onclick="cerrarModal()">&times;</span>
-      <div id="texto"></div>
-      <video id="video" src="" controls></video>
+    <div class="tarjeta" id="creencias">
+      <img src="icons/planeta.png" alt="Creencias">
+      <h2>Creencias que impulsan el cambio</h2>
+      <p>Las creencias son ideas sobre la naturaleza y su valor. Si creemos que “cada acción cuenta”, es más probable que actuemos con conciencia.</p>
+      <video src="videos/creencias.mp4" controls></video>
+    </div>
+
+    <div class="tarjeta" id="pensamiento">
+      <img src="icons/bombilla.png" alt="Del pensamiento a la acción">
+      <h2>Del pensamiento a la acción</h2>
+      <p>Una creencia genera un valor, forma una actitud y finalmente se traduce en una acción concreta: “El agua es vida” → respeto → cuidado → uso responsable.</p>
+      <video src="videos/pensamiento.mp4" controls></video>
+    </div>
+
+    <div class="tarjeta" id="sostenibles">
+      <img src="icons/reciclaje.png" alt="Comportamientos sostenibles">
+      <h2>Comportamientos sostenibles</h2>
+      <p>Acciones como separar residuos, usar bicicleta o reutilizar materiales reflejan coherencia entre lo que creemos y hacemos.</p>
+      <video src="videos/sostenibles.mp4" controls></video>
+    </div>
+
+    <div class="tarjeta" id="obstaculos">
+      <img src="icons/balanza.png" alt="Obstáculos y oportunidades">
+      <h2>Obstáculos y oportunidades</h2>
+      <p>Hay barreras como la desinformación, pero también oportunidades como la educación, la tecnología y el trabajo en comunidad.</p>
+      <video src="videos/obstaculos.mp4" controls></video>
+    </div>
+
+    <div class="tarjeta" id="emocional">
+      <img src="icons/flor.png" alt="Educación emocional y ambiental">
+      <h2>Educación emocional y ambiental</h2>
+      <p>Las emociones como la tristeza ante la contaminación o la alegría al cuidar un jardín motivan acciones positivas.</p>
+      <video src="videos/emocional.mp4" controls></video>
+    </div>
+
+    <div class="tarjeta" id="huella">
+      <img src="icons/huella.png" alt="Tu huella simbólica">
+      <h2>Tu huella simbólica</h2>
+      <p>Crea un símbolo que represente tu compromiso ambiental. Cada pétalo puede reflejar un valor, actitud o acción.</p>
+      <video src="videos/huella.mp4" controls></video>
     </div>
   </div>
-
-  <footer>
-    <p>© 2025 Tríptico Ambiental Interactivo 🌿</p>
-  </footer>
 
   <script src="script.js"></script>
 </body>
