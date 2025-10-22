@@ -11,6 +11,7 @@ body {
   background: linear-gradient(160deg, #e0f7fa, #b2ebf2);
   color: #004d40;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* Título principal */
@@ -42,11 +43,12 @@ body {
   transition: transform 0.35s, box-shadow 0.35s;
   cursor: pointer;
   position: relative;
+  overflow: hidden;
 }
 
 /* Efecto al pasar el mouse */
 .tarjeta:hover {
-  transform: scale(1.08);
+  transform: scale(1.08) rotateZ(-1deg);
   box-shadow: 0 12px 28px rgba(0,0,0,0.35);
 }
 
@@ -58,6 +60,11 @@ body {
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #00796b;
+  transition: transform 0.3s;
+}
+
+.tarjeta:hover img {
+  transform: scale(1.2) rotate(5deg);
 }
 
 /* Títulos de cada tema */
@@ -88,6 +95,22 @@ body {
 /* Video activo */
 .tarjeta video.active {
   display: block;
+}
+
+/* Animación de hojas flotantes */
+.hoja {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-image: url('img/hoja.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: caer linear infinite;
+}
+
+@keyframes caer {
+  0% { transform: translateY(-50px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(500px) rotate(360deg); opacity: 0; }
 }
 
 /* Animación suave al hacer scroll */
