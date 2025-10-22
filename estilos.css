@@ -1,57 +1,101 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #e0f7fa;
+/* Reset básico */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
+/* Cuerpo y tipografía */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(160deg, #e0f7fa, #b2ebf2);
+  color: #004d40;
+  min-height: 100vh;
+}
+
+/* Título principal */
+.titulo-principal {
+  text-align: center;
+  font-size: 2.5em;
+  margin: 30px 0;
+  color: #00796b;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Contenedor del tríptico */
 .triptico {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 30px;
   padding: 20px;
-  gap: 20px;
 }
 
+/* Tarjetas de los temas */
 .tarjeta {
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  width: 300px;
-  padding: 15px;
+  background-color: #ffffffdd;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  width: 350px;
+  padding: 20px;
   text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.35s, box-shadow 0.35s;
+  cursor: pointer;
+  position: relative;
 }
 
+/* Efecto al pasar el mouse */
 .tarjeta:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  transform: scale(1.08);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.35);
 }
 
+/* Imágenes de cada tarjeta */
 .tarjeta img {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 10px;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 15px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #00796b;
 }
 
+/* Títulos de cada tema */
 .tarjeta h2 {
-  font-size: 1.3em;
-  margin-bottom: 10px;
-  color: #00796b;
-}
-
-.tarjeta p {
-  font-size: 0.95em;
-  margin-bottom: 10px;
+  font-size: 1.5em;
+  margin-bottom: 12px;
   color: #004d40;
 }
 
-.tarjeta video {
-  width: 100%;
-  border-radius: 8px;
-  display: none;
+/* Párrafos de descripción */
+.tarjeta p {
+  font-size: 0.95em;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  text-align: justify;
+  color: #00695c;
 }
 
+/* Videos */
+.tarjeta video {
+  width: 100%;
+  border-radius: 15px;
+  display: none;
+  margin-top: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Video activo */
 .tarjeta video.active {
   display: block;
+}
+
+/* Animación suave al hacer scroll */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.tarjeta {
+  animation: fadeIn 0.8s ease forwards;
 }

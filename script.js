@@ -1,21 +1,27 @@
-// Seleccionamos todas las tarjetas
+// Selecciona todas las tarjetas
 const tarjetas = document.querySelectorAll('.tarjeta');
 
 tarjetas.forEach(tarjeta => {
   const video = tarjeta.querySelector('video');
 
-  // Al hacer clic en la tarjeta, se activa o desactiva el video
   tarjeta.addEventListener('click', () => {
     if(video) {
-      // Ocultar todos los videos
+      // Oculta todos los videos primero
       tarjetas.forEach(t => {
         const v = t.querySelector('video');
-        if(v) v.classList.remove('active');
+        if(v) {
+          v.pause();
+          v.currentTime = 0;
+          v.classList.remove('active');
+        }
       });
 
-      // Mostrar el video de la tarjeta clickeada
+      // Activa el video de la tarjeta seleccionada
       video.classList.add('active');
       video.play();
+
+      // Desplaza la tarjeta hacia arriba suavemente
+      tarjeta.scrollIntoView({ behavior: "smooth", block: "center" });
     }
   });
-});
+});;
