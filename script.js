@@ -24,4 +24,4 @@ tarjetas.forEach(tarjeta => {
       tarjeta.scrollIntoView({ behavior: "smooth", block: "center" });
     }
   });
-});;
+});

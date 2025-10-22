@@ -99,3 +99,60 @@ body {
 .tarjeta {
   animation: fadeIn 0.8s ease forwards;
 }
+
+/* ===== Responsivo para tablets y móviles ===== */
+@media (max-width: 768px) {
+  .triptico {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .tarjeta {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .tarjeta img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .tarjeta h2 {
+    font-size: 1.3em;
+  }
+
+  .tarjeta p {
+    font-size: 0.9em;
+  }
+
+  .titulo-principal {
+    font-size: 2em;
+    margin: 20px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .tarjeta {
+    width: 95%;
+    padding: 12px;
+  }
+
+  .tarjeta img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .tarjeta h2 {
+    font-size: 1.1em;
+  }
+
+  .tarjeta p {
+    font-size: 0.85em;
+  }
+
+  .titulo-principal {
+    font-size: 1.8em;
+  }
+}
