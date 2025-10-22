@@ -1,5 +1,6 @@
 function abrirSeccion(id){
-    document.querySelectorAll('.pantalla').forEach(p => p.classList.remove('activa'));
+    const pantallas = document.querySelectorAll('.pantalla');
+    pantallas.forEach(p => p.classList.remove('activa'));
     document.getElementById(id).classList.add('activa');
 }
 

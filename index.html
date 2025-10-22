@@ -3,110 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tríptico Ambiental Animado</title>
+    <title>Tríptico Ambiental</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <!-- Pantalla Inicial -->
-    <section id="inicio" class="pantalla activa" style="background-image: url('img/fondo_inicial.jpg');">
-        <canvas id="canvasParticulas"></canvas>
-        <div class="overlay">
-            <h1>Tríptico Ambiental</h1>
-            <div class="botones-secciones">
-                <button onclick="abrirSeccion('valores')">Valores Ambientales</button>
-                <button onclick="abrirSeccion('actitudes')">Actitudes</button>
-                <button onclick="abrirSeccion('creencias')">Creencias</button>
-                <button onclick="abrirSeccion('pensamiento')">Del pensamiento a la acción</button>
-                <button onclick="abrirSeccion('sostenibles')">Comportamientos sostenibles</button>
-                <button onclick="abrirSeccion('obstaculos')">Obstáculos y oportunidades</button>
-                <button onclick="abrirSeccion('emocional')">Educación emocional</button>
-                <button onclick="abrirSeccion('huella')">Tu huella simbólica</button>
-            </div>
+    <!-- Pantalla inicial -->
+    <section id="inicio" class="pantalla activa">
+        <h1>Tríptico Ambiental</h1>
+        <div class="botones-secciones">
+            <button onclick="abrirSeccion('valores')">Valores Ambientales</button>
+            <button onclick="abrirSeccion('actitudes')">Actitudes que transforman</button>
+            <button onclick="abrirSeccion('creencias')">Creencias que impulsan</button>
+            <button onclick="abrirSeccion('pensamiento')">Del pensamiento a la acción</button>
+            <button onclick="abrirSeccion('sostenibles')">Comportamientos sostenibles</button>
+            <button onclick="abrirSeccion('obstaculos')">Obstáculos y oportunidades</button>
+            <button onclick="abrirSeccion('emocional')">Educación emocional</button>
+            <button onclick="abrirSeccion('huella')">Tu huella simbólica</button>
         </div>
     </section>
 
     <!-- Secciones -->
-    <section id="valores" class="pantalla" style="background-image: url('img/valores.jpg');">
-        <canvas class="canvasSec"></canvas>
-        <div class="overlay">
-            <h2>Valores Ambientales</h2>
-            <p>Los valores ambientales son principios que guían nuestras acciones para cuidar la naturaleza. Promueven respeto, responsabilidad y conciencia ecológica para las futuras generaciones. Fomentan la preservación de la biodiversidad, la gestión sostenible de recursos y la ética ambiental integral.</p>
-            <video src="videos/valores.mp4" controls></video>
-            <button onclick="volverInicio()">Volver</button>
-        </div>
+    <section id="valores" class="pantalla">
+        <h2>Valores Ambientales</h2>
+        <p>Los valores ambientales son principios que nos guían para cuidar la naturaleza. Son como brújulas éticas que nos ayudan a decidir con conciencia ecológica. Por ejemplo, respetar la vida, actuar con responsabilidad y pensar en las futuras generaciones.</p>
+        <img src="img/valores.jpg" alt="Valores Ambientales">
+        <video src="videos/valores.mp4" controls></video>
+        <button onclick="volverInicio()">Volver</button>
     </section>
 
-    <section id="actitudes" class="pantalla" style="background-image: url('img/actitudes.jpg');">
-        <canvas class="canvasSec"></canvas>
-        <div class="overlay">
-            <h2>Actitudes que transforman</h2>
-            <p>Las actitudes reflejan cómo sentimos y actuamos frente al medio ambiente. Fomentar empatía, responsabilidad y participación positiva nos acerca a un mundo sostenible. Cada acción cotidiana como reciclar, cuidar áreas verdes o participar en campañas ambientales refleja esta actitud transformadora.</p>
-            <video src="videos/actitudes.mp4" controls></video>
-            <button onclick="volverInicio()">Volver</button>
-        </div>
+    <section id="actitudes" class="pantalla">
+        <h2>Actitudes que transforman</h2>
+        <p>Las actitudes muestran cómo nos sentimos y actuamos frente al medio ambiente. Una actitud positiva nos lleva a participar, cuidar y aprender; una negativa nos aleja del compromiso. Fomentar empatía y responsabilidad es clave.</p>
+        <img src="img/actitudes.jpg" alt="Actitudes Ambientales">
+        <video src="videos/actitudes.mp4" controls></video>
+        <button onclick="volverInicio()">Volver</button>
     </section>
 
-    <section id="creencias" class="pantalla" style="background-image: url('img/creencias.jpg');">
-        <canvas class="canvasSec"></canvas>
-        <div class="overlay">
-            <h2>Creencias que impulsan el cambio</h2>
-            <p>Nuestras creencias sobre la naturaleza influyen directamente en nuestros valores y acciones. “Cada acción cuenta” impulsa comportamientos conscientes y sostenibles. Creer en la interconexión de todos los seres vivos fortalece la conservación de ecosistemas y la educación ambiental integral.</p>
-            <video src="videos/creencias.mp4" controls></video>
-            <button onclick="volverInicio()">Volver</button>
-        </div>
+    <section id="creencias" class="pantalla">
+        <h2>Creencias que impulsan el cambio</h2>
+        <p>Las creencias son ideas que tenemos sobre la naturaleza y su valor. Si creemos que “cada acción cuenta”, es más probable que actuemos con conciencia. Estas creencias influyen directamente en nuestras actitudes y comportamientos.</p>
+        <img src="img/creencias.jpg" alt="Creencias Ambientales">
+        <video src="videos/creencias.mp4" controls></video>
+        <button onclick="volverInicio()">Volver</button>
     </section>
 
-    <section id="pensamiento" class="pantalla" style="background-image: url('img/pensamiento.jpg');">
-        <canvas class="canvasSec"></canvas>
-        <div class="overlay">
-            <h2>Del pensamiento a la acción</h2>
-            <p>Una creencia genera un valor, el valor forma una actitud y finalmente se traduce en acciones concretas. Ejemplo: “El agua es vida” → respeto → cuidado → uso responsable. Esta secuencia asegura coherencia entre conciencia, pensamiento y comportamiento ambiental.</p>
-            <video src="videos/pensamiento.mp4" controls></video>
-            <button onclick="volverInicio()">Volver</button>
-        </div>
+    <section id="pensamiento" class="pantalla">
+        <h2>Del pensamiento a la acción</h2>
+        <p>Lo que pensamos se convierte en lo que hacemos. Una creencia genera un valor, que forma una actitud y finalmente se traduce en acción. Ejemplo: “El agua es vida” → respeto → cuidado → uso responsable.</p>
+        <img src="img/pensamiento.jpg" alt="Del pensamiento a la acción">
+        <video src="videos/pensamiento.mp4" controls></video>
+        <button onclick="volverInicio()">Volver</button>
     </section>
 
-    <section id="sostenibles" class="pantalla" style="background-image: url('img/sostenibles.jpg');">
-        <canvas class="canvasSec"></canvas>
-        <div class="overlay">
-            <h2>Comportamientos sostenibles</h2>
-            <p>Acciones como separar residuos, usar bicicleta, reducir consumo de energía y reutilizar materiales reflejan coherencia entre lo que creemos y lo que hacemos para cuidar el planeta. Cada acción individual contribuye a un impacto colectivo positivo.</p>
-            <video src="videos/sostenibles.mp4" controls></video>
-            <button onclick="volverInicio()">Volver</button>
-        </div>
+    <section id="sostenibles" class="pantalla">
+        <h2>Comportamientos sostenibles</h2>
+        <p>Acciones como separar residuos, usar bicicleta o reutilizar materiales reflejan coherencia entre lo que creemos y lo que hacemos para cuidar el planeta.</p>
+        <img src="img/sostenibles.jpg" alt="Comportamientos sostenibles">
+        <video src="videos/sostenibles.mp4" controls></video>
+        <button onclick="volverInicio()">Volver</button>
     </section>
 
-    <section id="obstaculos" class="pantalla" style="background-image: url('img/obstaculos.jpg');">
-        <canvas class="canvasSec"></canvas>
-        <div class="overlay">
-            <h2>Obstáculos y oportunidades</h2>
-            <p>Existen barreras como la desinformación, el desinterés y la falta de recursos, pero también oportunidades como la educación, la innovación tecnológica y el trabajo en comunidad. Superar obstáculos requiere conciencia, cooperación y planificación.</p>
-            <video src="videos/obstaculos.mp4" controls></video>
-            <button onclick="volverInicio()">Volver</button>
-        </div>
+    <section id="obstaculos" class="pantalla">
+        <h2>Obstáculos y oportunidades</h2>
+        <p>En el camino hacia una cultura ambiental hay barreras como la desinformación o el desinterés, pero también oportunidades como la educación, la tecnología y el trabajo en comunidad.</p>
+        <img src="img/obstaculos.jpg" alt="Obstáculos y oportunidades">
+        <video src="videos/obstaculos.mp4" controls></video>
+        <button onclick="volverInicio()">Volver</button>
     </section>
 
-    <section id="emocional" class="pantalla" style="background-image: url('img/emocional.jpg');">
-        <canvas class="canvasSec"></canvas>
-        <div class="overlay">
-            <h2>Educación emocional y ambiental</h2>
-            <p>Este enfoque fortalece el vínculo afectivo con la naturaleza, motivando acciones positivas. Reconocer emociones como alegría, tristeza o preocupación relacionadas con el ambiente ayuda a tomar decisiones responsables y conscientes.</p>
-            <video src="videos/emocional.mp4" controls></video>
-            <button onclick="volverInicio()">Volver</button>
-        </div>
+    <section id="emocional" class="pantalla">
+        <h2>Educación emocional y ambiental</h2>
+        <p>Este enfoque une lo afectivo con lo ecológico. Las emociones pueden motivar acciones positivas. Educar desde lo emocional fortalece el vínculo con la naturaleza.</p>
+        <img src="img/emocional.jpg" alt="Educación emocional">
+        <video src="videos/emocional.mp4" controls></video>
+        <button onclick="volverInicio()">Volver</button>
     </section>
 
-    <section id="huella" class="pantalla" style="background-image: url('img/huella.jpg');">
-        <canvas class="canvasSec"></canvas>
-        <div class="overlay">
-            <h2>Tu huella simbólica</h2>
-            <p>Cada persona crea un símbolo de compromiso ambiental, representando valores, actitudes y acciones. Esta huella puede compartirse en redes y presentaciones, reforzando la identidad ecológica y el compromiso personal con el planeta.</p>
-            <video src="videos/huella.mp4" controls></video>
-            <button onclick="volverInicio()">Volver</button>
-        </div>
+    <section id="huella" class="pantalla">
+        <h2>Tu huella simbólica</h2>
+        <p>Invitamos a cada persona a crear un símbolo que represente su compromiso ambiental. Puede ser un mandala donde cada pétalo refleje un valor, actitud o acción.</p>
+        <img src="img/huella.jpg" alt="Huella simbólica">
+        <video src="videos/huella.mp4" controls></video>
+        <button onclick="volverInicio()">Volver</button>
     </section>
 
     <script src="script.js"></script>
-    <script src="particulas.js"></script>
 </body>
 </html>
